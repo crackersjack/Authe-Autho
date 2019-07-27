@@ -16,7 +16,7 @@ public class UserS {
     private String name;
     @Column(name = "AGE")
     private int age;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "ADDRESS_ID")
     private Address address;
 
@@ -44,4 +44,11 @@ public class UserS {
         this.age = age;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }

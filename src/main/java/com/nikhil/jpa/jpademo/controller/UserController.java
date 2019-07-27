@@ -24,8 +24,8 @@ public class UserController {
     public Optional<UserS> getUser(@RequestParam int userId){ return userService.getUser(userId); }
 
     @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
-    public UserS saveUser(@RequestBody UserS userS){
-        return userService.saveUser(userS);
+    public UserS saveUser(@RequestBody UserS user){
+        return userService.saveUser(user);
     }
 
 }
